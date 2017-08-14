@@ -1,0 +1,5 @@
+cd /usr/code
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /usr/code/
+docker run -d --name helloworld -p 80:80 -v /usr/code/src/:/var/www/html hello-world
